@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c2bm4umnt0ymc"
+path="res://.godot/imported/Wall_Triple_Plain.obj-52e5ebaa550894c280b9978e03c24112.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Triple_Plain.obj-52e5ebaa550894c280b9978e03c24112.mesh"]
+
+source_file="res://Mesh/Gabe/Wall_Triple_Plain.obj"
+dest_files=["res://.godot/imported/Wall_Triple_Plain.obj-52e5ebaa550894c280b9978e03c24112.mesh", "res://.godot/imported/Wall_Triple_Plain.obj-52e5ebaa550894c280b9978e03c24112.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://kk8qph4fr5ci"
+path="res://.godot/imported/Wall_Single_Recess.obj-aef93d987547d3b1441c196f3d080c32.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Single_Recess.obj-aef93d987547d3b1441c196f3d080c32.mesh"]
+
+source_file="res://Mesh/Gabe/Wall_Single_Recess.obj"
+dest_files=["res://.godot/imported/Wall_Single_Recess.obj-aef93d987547d3b1441c196f3d080c32.mesh", "res://.godot/imported/Wall_Single_Recess.obj-aef93d987547d3b1441c196f3d080c32.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

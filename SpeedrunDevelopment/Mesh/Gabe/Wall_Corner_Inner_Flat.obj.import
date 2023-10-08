@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c4p2gft8oev2p"
+path="res://.godot/imported/Wall_Corner_Inner_Flat.obj-760b9418c66e10a625b44b9b502ff1bb.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Wall_Corner_Inner_Flat.obj-760b9418c66e10a625b44b9b502ff1bb.mesh"]
+
+source_file="res://Mesh/Gabe/Wall_Corner_Inner_Flat.obj"
+dest_files=["res://.godot/imported/Wall_Corner_Inner_Flat.obj-760b9418c66e10a625b44b9b502ff1bb.mesh", "res://.godot/imported/Wall_Corner_Inner_Flat.obj-760b9418c66e10a625b44b9b502ff1bb.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

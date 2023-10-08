@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ckq8y0joxsg80"
+path="res://.godot/imported/Roof_Plain.obj-9f1055fbba4cf0a7ea6cd74157b52799.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Roof_Plain.obj-9f1055fbba4cf0a7ea6cd74157b52799.mesh"]
+
+source_file="res://Mesh/Gabe/Roof_Plain.obj"
+dest_files=["res://.godot/imported/Roof_Plain.obj-9f1055fbba4cf0a7ea6cd74157b52799.mesh", "res://.godot/imported/Roof_Plain.obj-9f1055fbba4cf0a7ea6cd74157b52799.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

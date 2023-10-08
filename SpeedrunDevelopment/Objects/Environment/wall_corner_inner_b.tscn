@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cgpyg7lro18n5"]
+
+[ext_resource type="ArrayMesh" uid="uid://b4xjdbpxrr2fx" path="res://Mesh/Textured/WallCornerInnerB.obj" id="1_wgfee"]
+[ext_resource type="Texture2D" uid="uid://dqopafolq31cp" path="res://Textures/Spatial/ConcreteWallA512.png" id="2_m1r5r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_focac"]
+albedo_texture = ExtResource("2_m1r5r")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_jyljq"]
+data = PackedVector3Array(0.5, 5, 0.5, 0.5, 0, 0, 0.5, 0, 0.5, 0.5, 0, 0.5, 0, 5, 0.5, 0.5, 5, 0.5, 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0.5, 5, 0.5, 0, 5, 0, 0.5, 5, 0, 0.5, 5, 0, 0.5, 0, 0, 0.5, 5, 0.5, 0, 0, 0.5, 0, 5, 0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0, 0, 0, 0, 0.5, 0, 5, 0.5, 0, 5, 0, 0.5, 5, 0.5)
+
+[node name="WallCornerInnerB" type="MeshInstance3D"]
+mesh = ExtResource("1_wgfee")
+surface_material_override/0 = SubResource("StandardMaterial3D_focac")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_jyljq")
