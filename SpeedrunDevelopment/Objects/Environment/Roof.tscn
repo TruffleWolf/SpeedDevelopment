@@ -9,7 +9,7 @@ albedo_texture = ExtResource("2_kab0n")
 [sub_resource type="BoxShape3D" id="BoxShape3D_vbid5"]
 size = Vector3(4, 0.5, 4)
 
-[node name="MeshInstance3D" type="MeshInstance3D"]
+[node name="RoofA512" type="MeshInstance3D"]
 mesh = ExtResource("1_tqogc")
 surface_material_override/0 = SubResource("StandardMaterial3D_6y80s")
 
