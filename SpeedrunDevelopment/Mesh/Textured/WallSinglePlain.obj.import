@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://d2ix8akd4kabn"
+path="res://.godot/imported/WallSinglePlain.obj-f7de29b6437ef87142b20e85f3a042c7.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WallSinglePlain.obj-f7de29b6437ef87142b20e85f3a042c7.mesh"]
+
+source_file="res://Mesh/Textured/WallSinglePlain.obj"
+dest_files=["res://.godot/imported/WallSinglePlain.obj-f7de29b6437ef87142b20e85f3a042c7.mesh", "res://.godot/imported/WallSinglePlain.obj-f7de29b6437ef87142b20e85f3a042c7.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

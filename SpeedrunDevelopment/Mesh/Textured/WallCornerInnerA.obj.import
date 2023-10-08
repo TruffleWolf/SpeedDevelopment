@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c1r0t7iexftb"
+path="res://.godot/imported/WallCornerInnerA.obj-8c065fd166834a486f0cf006a3203f8e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/WallCornerInnerA.obj-8c065fd166834a486f0cf006a3203f8e.mesh"]
+
+source_file="res://Mesh/Textured/WallCornerInnerA.obj"
+dest_files=["res://.godot/imported/WallCornerInnerA.obj-8c065fd166834a486f0cf006a3203f8e.mesh", "res://.godot/imported/WallCornerInnerA.obj-8c065fd166834a486f0cf006a3203f8e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

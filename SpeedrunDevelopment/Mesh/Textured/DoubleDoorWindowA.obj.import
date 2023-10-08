@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bivht83farhgy"
+path="res://.godot/imported/DoubleDoorWindowA.obj-f998cbcbed6e86704682f5b2c993cdef.mesh"
+
+[deps]
+
+files=["res://.godot/imported/DoubleDoorWindowA.obj-f998cbcbed6e86704682f5b2c993cdef.mesh"]
+
+source_file="res://Mesh/Textured/DoubleDoorWindowA.obj"
+dest_files=["res://.godot/imported/DoubleDoorWindowA.obj-f998cbcbed6e86704682f5b2c993cdef.mesh", "res://.godot/imported/DoubleDoorWindowA.obj-f998cbcbed6e86704682f5b2c993cdef.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
