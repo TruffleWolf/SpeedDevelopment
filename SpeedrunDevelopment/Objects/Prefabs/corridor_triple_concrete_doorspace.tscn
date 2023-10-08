@@ -8,10 +8,10 @@
 [node name="CorridorTripleConcrete" type="Node3D"]
 
 [node name="WallSinglePlain" parent="." instance=ExtResource("1_lffjc")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, 4.5)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 4, 0, 5)
 
 [node name="WallSinglePlain2" parent="WallSinglePlain" instance=ExtResource("1_lffjc")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 9.53674e-07)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, 2.86102e-06)
 skeleton = NodePath("../..")
 
 [node name="WallTriplePlain" parent="." instance=ExtResource("2_swtsy")]

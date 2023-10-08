@@ -1,15 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ualywfct6fwx"]
+[gd_scene load_steps=4 format=3 uid="uid://ualywfct6fwx"]
 
-[ext_resource type="PackedScene" uid="uid://dcqhswyr1k0cd" path="res://Objects/Environment/wall_single_plain.tscn" id="1_21bg6"]
 [ext_resource type="PackedScene" uid="uid://cbangabnbvopd" path="res://Objects/Environment/wall_triple_plain.tscn" id="2_a4i1b"]
 [ext_resource type="PackedScene" uid="uid://bc2sl1ckfsxd8" path="res://Objects/Environment/Floor.tscn" id="3_vlq4h"]
 [ext_resource type="PackedScene" uid="uid://bhrhrv4xgeagr" path="res://Objects/Environment/Roof.tscn" id="4_olpm6"]
 
 [node name="CorridorTripleConcrete" type="Node3D"]
-
-[node name="WallSinglePlain" parent="." instance=ExtResource("1_21bg6")]
-transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 6.5, 0, 2.5)
-visible = false
 
 [node name="WallTriplePlain" parent="." instance=ExtResource("2_a4i1b")]
 
