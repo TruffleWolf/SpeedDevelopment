@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bih0d58aogu1t"
+path="res://.godot/imported/RoofJointInnerB.obj-bfc071b631d4a34bfe2deeeeb3b46463.mesh"
+
+[deps]
+
+files=["res://.godot/imported/RoofJointInnerB.obj-bfc071b631d4a34bfe2deeeeb3b46463.mesh"]
+
+source_file="res://Mesh/Textured/RoofJointInnerB.obj"
+dest_files=["res://.godot/imported/RoofJointInnerB.obj-bfc071b631d4a34bfe2deeeeb3b46463.mesh", "res://.godot/imported/RoofJointInnerB.obj-bfc071b631d4a34bfe2deeeeb3b46463.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
