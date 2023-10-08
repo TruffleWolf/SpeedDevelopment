@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://bc2ivrgylqm03"]
+[gd_scene load_steps=22 format=3 uid="uid://bc2ivrgylqm03"]
 
 [ext_resource type="PackedScene" uid="uid://du2c2x0l2qsvg" path="res://Objects/Player.tscn" id="1_8rlcf"]
 [ext_resource type="Script" path="res://Scripts/Prop.gd" id="2_8ireo"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://Scripts/Key.gd" id="4_pve15"]
 [ext_resource type="Material" path="res://Mats/Debug/Maroon.tres" id="5_p7531"]
 [ext_resource type="PackedScene" uid="uid://cbqp24158lu0r" path="res://Objects/double_door_windowed.tscn" id="6_vephf"]
+[ext_resource type="PackedScene" uid="uid://q0dp0pp5x8dm" path="res://Objects/Prefabs/3x3RoomNoDoors.tscn" id="7_24snb"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hur0j"]
 size = Vector3(50, 0.1, 50)
@@ -54,6 +55,7 @@ size = Vector3(0.2, 0.1, 0.5)
 [node name="Test_Level" type="Node3D"]
 
 [node name="Map" type="Node3D" parent="."]
+transform = Transform3D(0.6, 0, 0, 0, 0.6, 0, 0, 0, 0.6, 0, 0, 0)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Map"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.16869, 0)
@@ -81,6 +83,9 @@ mesh = SubResource("CylinderMesh_vpfee")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Map/MeshInstance3D3/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_cy8ko")
+
+[node name="Node3D" parent="Map" instance=ExtResource("7_24snb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_8rlcf")]
 collision_layer = 1
