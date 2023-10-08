@@ -1,10 +1,11 @@
-[gd_scene load_steps=20 format=3 uid="uid://bc2ivrgylqm03"]
+[gd_scene load_steps=21 format=3 uid="uid://bc2ivrgylqm03"]
 
 [ext_resource type="PackedScene" uid="uid://du2c2x0l2qsvg" path="res://Objects/Player.tscn" id="1_8rlcf"]
 [ext_resource type="Script" path="res://Scripts/Prop.gd" id="2_8ireo"]
 [ext_resource type="Material" path="res://Mats/Debug/Brown.tres" id="3_smya8"]
 [ext_resource type="Script" path="res://Scripts/Key.gd" id="4_pve15"]
 [ext_resource type="Material" path="res://Mats/Debug/Maroon.tres" id="5_p7531"]
+[ext_resource type="PackedScene" uid="uid://cbqp24158lu0r" path="res://Objects/double_door_windowed.tscn" id="6_vephf"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_hur0j"]
 size = Vector3(50, 0.1, 50)
@@ -118,3 +119,5 @@ shape = SubResource("BoxShape3D_nxqgd")
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Key/CollisionShape3D"]
 mesh = SubResource("BoxMesh_xaxjv")
 surface_material_override/0 = ExtResource("5_p7531")
+
+[node name="DoubleDoorWindowed" parent="." instance=ExtResource("6_vephf")]
