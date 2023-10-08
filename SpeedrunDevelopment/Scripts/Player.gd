@@ -2,11 +2,11 @@ extends CharacterBody3D
 
 
 @onready var active_weapon = 3
-const RUN_SPEED = 5.0
+@export var RUN_SPEED = 5.0
 const WALK_SPEED = 2.5
 const CROUCH_SPEED = 2.0
 const MOVE_ACCEL = 0.1
-const JUMP_FORCE = 10
+@export var JUMP_FORCE = 10
 var direction = Vector3()
 var fall_speed = 0.1
 var accuracy_mod = 0.0
@@ -18,6 +18,7 @@ var held_prop = null
 
 
 func _ready():
+	add_to_group("Player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 
@@ -98,7 +99,8 @@ func get_grabpoint():
 
 
 func _on_area_3d_body_entered(body):
-	floor_collisions.append(body)
+	if !body.is_in_group("Player"):
+		floor_collisions.append(body)
 
 
 func _on_area_3d_body_exited(body):
