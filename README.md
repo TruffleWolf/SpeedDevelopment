@@ -1,3 +1,3 @@
 # SpeedDevelopment
-Attempting to make something fast.
-Don't expect any quality.
+Attempting to make something through a fast workflow via the Godot Engine.
+

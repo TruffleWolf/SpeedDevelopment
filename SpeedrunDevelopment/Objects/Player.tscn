@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://du2c2x0l2qsvg"]
+
+[ext_resource type="Script" path="res://Scripts/Player.gd" id="1_8xh38"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bm47"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_jkleq"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_yy11l"]
+height = 0.4
+radius = 0.45
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+script = ExtResource("1_8xh38")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_1bm47")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CollisionShape3D"]
+cast_shadow = 0
+mesh = SubResource("CapsuleMesh_jkleq")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
+
+[node name="InteractRay" type="RayCast3D" parent="Camera3D"]
+collision_mask = 2
+
+[node name="HoldPoint" type="Node3D" parent="Camera3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.806276, 0)
+shape = SubResource("CylinderShape3D_yy11l")
+
+[connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
+[connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
