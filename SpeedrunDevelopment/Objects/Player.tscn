@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://du2c2x0l2qsvg"]
+[gd_scene load_steps=7 format=3 uid="uid://du2c2x0l2qsvg"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_8xh38"]
+[ext_resource type="Texture2D" uid="uid://cuxs2ncth7ley" path="res://Textures/Sprite/light_01.png" id="2_blx1t"]
+[ext_resource type="Texture2D" uid="uid://cnqhfxpu7u6q" path="res://Textures/Sprite/circle_05.png" id="2_g1e8r"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bm47"]
 
@@ -11,6 +13,7 @@ height = 0.4
 radius = 0.45
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
+collision_layer = 0
 script = ExtResource("1_8xh38")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -24,10 +27,42 @@ mesh = SubResource("CapsuleMesh_jkleq")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.8, 0)
 
 [node name="InteractRay" type="RayCast3D" parent="Camera3D"]
+target_position = Vector3(0, 0, -2)
 collision_mask = 2
+collide_with_areas = true
 
 [node name="HoldPoint" type="Node3D" parent="Camera3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.5)
+
+[node name="HUD" type="Control" parent="Camera3D"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Center" type="Control" parent="Camera3D/HUD"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="InteractIcon" type="Sprite2D" parent="Camera3D/HUD/Center"]
+visible = false
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_blx1t")
+
+[node name="Sprite2D" type="Sprite2D" parent="Camera3D/HUD/Center/InteractIcon"]
+texture = ExtResource("2_g1e8r")
 
 [node name="Area3D" type="Area3D" parent="."]
 

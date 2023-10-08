@@ -40,10 +40,18 @@ func _physics_process(delta):
 		
 		
 		
-		
-		
 		if $Camera3D/InteractRay.is_colliding():
-			$Camera3D/InteractRay.get_collider().activate(self)
+			
+			$Camera3D/HUD/Center/InteractIcon.show()
+			
+			if Input.is_action_just_pressed("Interact"):
+				if held_prop ==null:
+					$Camera3D/InteractRay.get_collider().activate(self)
+				elif held_prop != null:
+					held_prop.drop()
+					held_prop = null
+		else:
+			$Camera3D/HUD/Center/InteractIcon.hide()
 		
 		movement()
 		
@@ -85,7 +93,8 @@ func movement():
 	move_and_slide()
 	
 
-
+func get_grabpoint():
+	return $Camera3D/HoldPoint.global_transform
 
 
 func _on_area_3d_body_entered(body):
