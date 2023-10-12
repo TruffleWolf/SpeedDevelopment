@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://celm63p0qxoji"
+path="res://.godot/imported/Cabinet_Wall_Large_Small_Electronics.obj-32cb7241cba8f6051033cfeaf52ce9ea.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Cabinet_Wall_Large_Small_Electronics.obj-32cb7241cba8f6051033cfeaf52ce9ea.mesh"]
+
+source_file="res://Mesh/Gabe/Cabinet_Wall_Large_Small_Electronics.obj"
+dest_files=["res://.godot/imported/Cabinet_Wall_Large_Small_Electronics.obj-32cb7241cba8f6051033cfeaf52ce9ea.mesh", "res://.godot/imported/Cabinet_Wall_Large_Small_Electronics.obj-32cb7241cba8f6051033cfeaf52ce9ea.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

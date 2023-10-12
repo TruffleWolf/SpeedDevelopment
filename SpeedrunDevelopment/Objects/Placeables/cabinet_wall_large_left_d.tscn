@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6dxnhk67adda"]
+
+[ext_resource type="ArrayMesh" uid="uid://duhqmcb2egpxc" path="res://Mesh/Gabe/Cabinet_Wall_Large_LeftD.obj" id="1_8imu8"]
+
+[node name="CabinetWallLargeLeftD" type="MeshInstance3D"]
+mesh = ExtResource("1_8imu8")

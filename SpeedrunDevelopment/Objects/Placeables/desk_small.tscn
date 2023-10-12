@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cx1rq1ku45exx"]
+
+[ext_resource type="ArrayMesh" uid="uid://4hq6ya3txhbd" path="res://Mesh/Gabe/Desk_Small.obj" id="1_f3nk3"]
+
+[node name="DeskSmall" type="MeshInstance3D"]
+mesh = ExtResource("1_f3nk3")
