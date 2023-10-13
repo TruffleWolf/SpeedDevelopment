@@ -14,5 +14,4 @@ data = PackedVector3Array(2, 0, 0, -2, 0, 0, -2, 0.5, 0, -2, 0, -5, 2, 0, -5, 2,
 shape = SubResource("ConcavePolygonShape3D_qtoe3")
 
 [node name="CabinetWallLargeSmallElectronics2" parent="." index="1" instance=ExtResource("2_alvk0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.5, 0)
-skeleton = NodePath("../..")
+transform = Transform3D(1, 0, 1.74846e-07, 0, 1, 0, -1.74846e-07, 0, 1, 0, -1.5, 0)
