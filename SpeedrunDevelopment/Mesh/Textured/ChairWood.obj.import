@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bvc7qchp83orj"
+path="res://.godot/imported/ChairWood.obj-7867710d673542a7e4043876fdadc185.mesh"
+
+[deps]
+
+files=["res://.godot/imported/ChairWood.obj-7867710d673542a7e4043876fdadc185.mesh"]
+
+source_file="res://Mesh/Textured/ChairWood.obj"
+dest_files=["res://.godot/imported/ChairWood.obj-7867710d673542a7e4043876fdadc185.mesh", "res://.godot/imported/ChairWood.obj-7867710d673542a7e4043876fdadc185.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

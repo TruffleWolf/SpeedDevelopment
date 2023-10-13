@@ -2,7 +2,7 @@ extends Area3D
 
 signal pressed 
 
-@export var key_required = -1
+var key_required = -1
 
 
 func activate(who):

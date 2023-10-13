@@ -88,6 +88,7 @@ shape = SubResource("ConcavePolygonShape3D_cy8ko")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 9.5)
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_8rlcf")]
+transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 1.98003, 1.98504, -2.69179)
 collision_layer = 1
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -112,7 +113,7 @@ mesh = SubResource("BoxMesh_58naf")
 surface_material_override/0 = ExtResource("3_smya8")
 
 [node name="Key" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -4.90792)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.41694, -4.90792)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("4_pve15")
@@ -126,3 +127,4 @@ mesh = SubResource("BoxMesh_xaxjv")
 surface_material_override/0 = ExtResource("5_p7531")
 
 [node name="DoubleDoorWindowed" parent="." instance=ExtResource("6_vephf")]
+key_required = 0

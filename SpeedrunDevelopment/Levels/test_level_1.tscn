@@ -1,0 +1,107 @@
+[gd_scene load_steps=12 format=3 uid="uid://j24n7tcq5hjm"]
+
+[ext_resource type="PackedScene" uid="uid://q0dp0pp5x8dm" path="res://Objects/Prefabs/3x3RoomNoDoors.tscn" id="1_x6hrs"]
+[ext_resource type="PackedScene" uid="uid://ualywfct6fwx" path="res://Objects/Prefabs/corridor_triple_concrete.tscn" id="2_2ttuc"]
+[ext_resource type="PackedScene" uid="uid://b78cfccnl6jyl" path="res://Objects/single_door_windowed.tscn" id="3_4fjpk"]
+[ext_resource type="PackedScene" uid="uid://bc2sl1ckfsxd8" path="res://Objects/Environment/Floor.tscn" id="4_w61w3"]
+[ext_resource type="PackedScene" uid="uid://bv0vifrppvdd6" path="res://Objects/Prefabs/intersection.tscn" id="5_1ugam"]
+[ext_resource type="PackedScene" uid="uid://c2w2pyr0sqkcp" path="res://Objects/Prefabs/corridor_single_concrete.tscn" id="6_u365n"]
+[ext_resource type="PackedScene" uid="uid://clh8q6aiu50xr" path="res://Objects/Prefabs/corridor_single_concrete_doorspace.tscn" id="7_52smt"]
+[ext_resource type="PackedScene" uid="uid://cj1g7eihw55ia" path="res://Objects/Prefabs/corridor_triple_concrete_doorspace.tscn" id="8_ph34c"]
+[ext_resource type="PackedScene" uid="uid://dcqhswyr1k0cd" path="res://Objects/Environment/wall_single_plain.tscn" id="9_f7ik0"]
+[ext_resource type="PackedScene" uid="uid://djhn31ncs4ir" path="res://Objects/Prefabs/1x1RoomNoDoors.tscn" id="10_4qg85"]
+[ext_resource type="PackedScene" uid="uid://du2c2x0l2qsvg" path="res://Objects/Player.tscn" id="11_fkc6f"]
+
+[node name="TestLevel1" type="Node3D"]
+
+[node name="3x3RoomNoDoors" parent="." instance=ExtResource("1_x6hrs")]
+
+[node name="CorridorTripleConcrete" parent="." instance=ExtResource("2_2ttuc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, -2.5)
+
+[node name="CorridorTripleConcrete2" parent="." instance=ExtResource("2_2ttuc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.5, 0, 8.5)
+
+[node name="CorridorTripleConcrete3" parent="." instance=ExtResource("2_2ttuc")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 18.5, 0, 20.5)
+
+[node name="SingleDoorWindowed" parent="." instance=ExtResource("3_4fjpk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6.5, 0, 0)
+
+[node name="SingleDoorWindowed3" parent="." instance=ExtResource("3_4fjpk")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 2.5, 0, 20.5)
+
+[node name="SingleDoorWindowed2" parent="." instance=ExtResource("3_4fjpk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="FloorConcrete" parent="." instance=ExtResource("4_w61w3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6, 0, 0)
+
+[node name="FloorConcrete3" parent="." instance=ExtResource("4_w61w3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 20)
+
+[node name="FloorConcrete2" parent="." instance=ExtResource("4_w61w3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 6)
+
+[node name="intersection" parent="." instance=ExtResource("5_1ugam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, -2.5)
+
+[node name="intersection2" parent="." instance=ExtResource("5_1ugam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 26.5)
+
+[node name="intersection3" parent="." instance=ExtResource("5_1ugam")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.5, 0, 26.5)
+
+[node name="CorridorSingleConcrete" parent="." instance=ExtResource("6_u365n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.5, 0, 26.5)
+
+[node name="CorridorSingleConcrete5" parent="." instance=ExtResource("6_u365n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, 12.5)
+
+[node name="CorridorSingleConcrete6" parent="." instance=ExtResource("6_u365n")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, 8.5)
+
+[node name="CorridorSingleConcrete3" parent="." instance=ExtResource("6_u365n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.5, 0, 26.5)
+
+[node name="CorridorSingleConcrete4" parent="." instance=ExtResource("6_u365n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5, 0, 26.5)
+
+[node name="CorridorSingleConcrete2" parent="." instance=ExtResource("7_52smt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.5, 0, 26.5)
+
+[node name="CorridorTripleConcrete4" parent="." instance=ExtResource("8_ph34c")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -2.5, 0, 20.5)
+
+[node name="WallSinglePlain" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -6.5)
+
+[node name="WallSinglePlain2" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6.5, 0, 0)
+
+[node name="WallSinglePlain3" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 24, 0, 0)
+
+[node name="WallSinglePlain4" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 21, 0, -3)
+
+[node name="WallSinglePlain5" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 21, 0, 32)
+
+[node name="WallSinglePlain7" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 32)
+
+[node name="WallSinglePlain8" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -3, 0, 29)
+
+[node name="WallSinglePlain6" parent="." instance=ExtResource("9_f7ik0")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 24, 0, 29)
+
+[node name="1x1RoomNoDoors" parent="." instance=ExtResource("10_4qg85")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 0, 22.5)
+
+[node name="1x1RoomNoDoors2" parent="." instance=ExtResource("10_4qg85")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.5, 0, 18)
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("11_fkc6f")]
+transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, 2.03854, 0)

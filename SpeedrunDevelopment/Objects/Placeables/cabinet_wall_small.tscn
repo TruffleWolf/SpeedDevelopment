@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cv01386g285a4"]
+
+[ext_resource type="ArrayMesh" uid="uid://bhegpify67s3f" path="res://Mesh/Textured/Small_Cabinet_empty.obj" id="1_ugfym"]
+[ext_resource type="Material" uid="uid://b6xsq6gj26j5r" path="res://Mats/Metal_Rusted2.tres" id="2_r3h41"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjp0d"]
+size = Vector3(2.01413, 2.44608, 0.495444)
+
+[node name="CabinetWallSmall" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_ugfym")
+surface_material_override/0 = ExtResource("2_r3h41")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.78316, 0.748877)
+shape = SubResource("BoxShape3D_xjp0d")

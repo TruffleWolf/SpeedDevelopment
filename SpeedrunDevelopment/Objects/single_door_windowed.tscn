@@ -1,12 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://b78cfccnl6jyl"]
+[gd_scene load_steps=20 format=3 uid="uid://b78cfccnl6jyl"]
 
 [ext_resource type="Script" path="res://Scripts/Door.gd" id="1_u01bl"]
 [ext_resource type="Texture2D" uid="uid://drj4ebak6ekoo" path="res://Mesh/Textured/SingleDoorFrame_TexturesCom_Concrete_DamagedPaint2_1K_albedo.png" id="2_xuxh2"]
 [ext_resource type="Texture2D" uid="uid://bdte7xhv3adsu" path="res://Mesh/Textured/SingleDoorFrame_TexturesCom_MetalSeawall_HeavyRust_1K_albedo.png" id="3_r30gr"]
-[ext_resource type="ArrayMesh" uid="uid://bqw43o8syycp6" path="res://Mesh/Textured/SingleDoorWindow.obj" id="4_whlqt"]
-[ext_resource type="Texture2D" uid="uid://syhdlid4yywy" path="res://Textures/Spatial/RustedMetal512.png" id="5_wpsvy"]
+[ext_resource type="ArrayMesh" uid="uid://bqw43o8syycp6" path="res://Mesh/Textured/SingleDoorWindow.obj" id="4_exihb"]
+[ext_resource type="Material" uid="uid://c0alptreyuuv" path="res://Mats/Metal_Rusted.tres" id="5_r41h8"]
 [ext_resource type="Script" path="res://Scripts/Button.gd" id="6_lk3uv"]
-[ext_resource type="Material" path="res://Mats/Debug/Brown.tres" id="7_b276h"]
+[ext_resource type="ArrayMesh" uid="uid://i2d0qk8nv5db" path="res://Mesh/Textured/keypad.obj" id="7_q23j5"]
+[ext_resource type="Material" uid="uid://o5hswwcjmfjt" path="res://Mats/keypad.tres" id="8_gypqm"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_yb177"]
 resource_name = "Wall"
@@ -76,9 +77,6 @@ shadow_mesh = SubResource("ArrayMesh_c1fyk")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_x5ghl"]
 data = PackedVector3Array(2, 0.375, -5, 2, 0.375, -4.3333, 2, 0.75, -4.3333, -1.3333, 0.75, -3.9333, -2, 0.75, 0, -2, 0.75, -4.3333, 2, 0.375, 0, 1.3333, 0.375, 0, 1.3333, 0.75, 0, -2, 0.375, -5, -1.3333, 0.375, -5, -1.3333, 0.75, -5, 1.3333, 0.375, -5, 2, 0.375, -5, 2, 0.75, -5, -1.3333, 0.375, -5, 1.3333, 0.375, -5, 1.3333, 0.75, -5, -1.3333, 0.375, 0, -2, 0.375, 0, -2, 0.75, 0, 2, 0.75, -5, 1.7333, 0.75, -4.3333, 1.3333, 0.75, -4.7333, 0.9333, 0.375, -4.3333, -0.9333, 0.375, -4.3333, -0.9333, 0.75, -4.3333, -1.3333, 0.75, -4.7333, -2, 0.75, -5, -1.3333, 0.75, -5, 2, 0.75, -4.3333, 1.3333, 0.75, -3.9333, 1.7333, 0.75, -4.3333, -1.3333, 0.75, -5, -0.9333, 0.75, -4.3333, -1.3333, 0.75, -4.7333, 2, 0.375, -4.3333, 2, 0.375, 0, 2, 0.75, 0, 0.9333, 0.75, -4.3333, 1.3333, 0.75, -4.7333, 1.7333, 0.75, -4.3333, -0.9333, 0.75, -4.3333, -1.3333, 0.75, -3.9333, -1.7333, 0.75, -4.3333, 1.3333, 0.375, -3.9333, 1.3333, 0.75, -3.9333, 1.3333, 0.75, 0, 0.9333, 0.375, -4.3333, 0.9333, 0.75, -4.3333, 1.3333, 0.75, -3.9333, -1.3333, 0.375, -3.9333, -1.3333, 0.75, -3.9333, -0.9333, 0.75, -4.3333, -2, 0.75, -4.3333, -2, 0.75, 0, -2, 0.375, 0, 2, 0, -4.3333, 2, 0, 0, 2, 0.375, 0, -1.3333, 0.75, 0, -1.3333, 0.75, -3.9333, -1.3333, 0.375, -3.9333, -1.3333, 0, 0, -2, 0, 0, -2, 0.375, 0, -1.3333, 0, -5, 1.3333, 0, -5, 1.3333, 0.375, -5, 1.3333, 0, -5, 2, 0, -5, 2, 0.375, -5, -2, 0, -5, -1.3333, 0, -5, -1.3333, 0.375, -5, 2, 0, 0, 1.3333, 0, 0, 1.3333, 0.375, 0, 2, 0, -5, 2, 0, -4.3333, 2, 0.375, -4.3333, -2, 0.75, -5, -2, 0.75, -4.3333, -2, 0.375, -4.3333, -2, 0.375, -5, -2, 0.375, -4.3333, -2, 0, -4.3333, -2, 0.375, -4.3333, -2, 0.375, 0, -2, 0, 0, 2, 0.375, -5, 2, 0.75, -4.3333, 2, 0.75, -5, -2, 0.75, 0, -1.3333, 0.75, -3.9333, -1.3333, 0.75, 0, -1.3333, 0.75, -3.9333, -2, 0.75, -4.3333, -1.7333, 0.75, -4.3333, 2, 0.375, 0, 1.3333, 0.75, 0, 2, 0.75, 0, -2, 0.375, -5, -1.3333, 0.75, -5, -2, 0.75, -5, 1.3333, 0.375, -5, 2, 0.75, -5, 1.3333, 0.75, -5, -1.3333, 0.375, -5, 1.3333, 0.75, -5, -1.3333, 0.75, -5, -1.3333, 0.375, 0, -2, 0.75, 0, -1.3333, 0.75, 0, 1.7333, 0.75, -4.3333, 2, 0.75, -5, 2, 0.75, -4.3333, 2, 0.75, -5, 1.3333, 0.75, -4.7333, 1.3333, 0.75, -5, 0.9333, 0.375, -4.3333, -0.9333, 0.75, -4.3333, 0.9333, 0.75, -4.3333, -2, 0.75, -4.3333, -2, 0.75, -5, -1.7333, 0.75, -4.3333, -1.7333, 0.75, -4.3333, -2, 0.75, -5, -1.3333, 0.75, -4.7333, 1.3333, 0.75, 0, 1.3333, 0.75, -3.9333, 2, 0.75, 0, 2, 0.75, 0, 1.3333, 0.75, -3.9333, 2, 0.75, -4.3333, -0.9333, 0.75, -4.3333, 1.3333, 0.75, -5, 0.9333, 0.75, -4.3333, 0.9333, 0.75, -4.3333, 1.3333, 0.75, -5, 1.3333, 0.75, -4.7333, 1.3333, 0.75, -5, -0.9333, 0.75, -4.3333, -1.3333, 0.75, -5, 2, 0.375, -4.3333, 2, 0.75, 0, 2, 0.75, -4.3333, 0.9333, 0.75, -4.3333, 1.7333, 0.75, -4.3333, 1.3333, 0.75, -3.9333, -0.9333, 0.75, -4.3333, -1.7333, 0.75, -4.3333, -1.3333, 0.75, -4.7333, 1.3333, 0.375, -3.9333, 1.3333, 0.75, 0, 1.3333, 0.375, 0, 0.9333, 0.375, -4.3333, 1.3333, 0.75, -3.9333, 1.3333, 0.375, -3.9333, -1.3333, 0.375, -3.9333, -0.9333, 0.75, -4.3333, -0.9333, 0.375, -4.3333, -2, 0.75, -4.3333, -2, 0.375, 0, -2, 0.375, -4.3333, 2, 0, -4.3333, 2, 0.375, 0, 2, 0.375, -4.3333, -1.3333, 0.75, 0, -1.3333, 0.375, -3.9333, -1.3333, 0.375, 0, -1.3333, 0, 0, -2, 0.375, 0, -1.3333, 0.375, 0, -1.3333, 0, -5, 1.3333, 0.375, -5, -1.3333, 0.375, -5, 1.3333, 0, -5, 2, 0.375, -5, 1.3333, 0.375, -5, -2, 0, -5, -1.3333, 0.375, -5, -2, 0.375, -5, 2, 0, 0, 1.3333, 0.375, 0, 2, 0.375, 0, 2, 0, -5, 2, 0.375, -4.3333, 2, 0.375, -5, -2, 0.75, -5, -2, 0.375, -4.3333, -2, 0.375, -5, -2, 0.375, -5, -2, 0, -4.3333, -2, 0, -5, -2, 0.375, -4.3333, -2, 0, 0, -2, 0, -4.3333, 1.3333, 0.375, 0, 1.3333, 0, 0, 1.2, 0, 0, 1.3333, 0.375, 0, 1.2, 0.375, 0, 1.2, 0.375, -3.8156, 0.84, 0, -4.1756, -0.84, 0, -4.1756, -0.84, 0.375, -4.1756, -1.3333, 0.375, -3.9333, -0.9333, 0.375, -4.3333, -0.84, 0.375, -4.1756, -0.9333, 0.375, -4.3333, 0.9333, 0.375, -4.3333, 0.84, 0.375, -4.1756, -1.3333, 0.375, 0, -1.3333, 0.375, -3.9333, -1.2, 0.375, -3.8156, 1.3333, 0.375, -3.9333, 1.2, 0.375, -3.8156, 0.84, 0.375, -4.1756, -1.3333, 0, 0, -1.3333, 0.375, 0, -1.2, 0.375, 0, -1.2, 0.375, 0, -1.2, 0.375, -3.8156, -1.2, 0, -3.8156, -1.2, 0, -3.8156, -1.2, 0.375, -3.8156, -0.84, 0.375, -4.1756, 0.84, 0, -4.1756, 0.84, 0.375, -4.1756, 1.2, 0.375, -3.8156, 1.2, 0, -3.8156, 1.2, 0.375, -3.8156, 1.2, 0.375, 0, 1.3333, 0.375, 0, 1.2, 0, 0, 1.2, 0.375, 0, 1.3333, 0.375, 0, 1.2, 0.375, -3.8156, 1.3333, 0.375, -3.9333, 0.84, 0, -4.1756, -0.84, 0.375, -4.1756, 0.84, 0.375, -4.1756, -1.3333, 0.375, -3.9333, -0.84, 0.375, -4.1756, -1.2, 0.375, -3.8156, -0.9333, 0.375, -4.3333, 0.84, 0.375, -4.1756, -0.84, 0.375, -4.1756, -1.3333, 0.375, 0, -1.2, 0.375, -3.8156, -1.2, 0.375, 0, 1.3333, 0.375, -3.9333, 0.84, 0.375, -4.1756, 0.9333, 0.375, -4.3333, -1.3333, 0, 0, -1.2, 0.375, 0, -1.2, 0, 0, -1.2, 0.375, 0, -1.2, 0, -3.8156, -1.2, 0, 0, -1.2, 0, -3.8156, -0.84, 0.375, -4.1756, -0.84, 0, -4.1756, 0.84, 0, -4.1756, 1.2, 0.375, -3.8156, 1.2, 0, -3.8156, 1.2, 0, -3.8156, 1.2, 0.375, 0, 1.2, 0, 0)
 
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etkou"]
-albedo_texture = ExtResource("5_wpsvy")
-
 [sub_resource type="BoxShape3D" id="BoxShape3D_iwp8u"]
 size = Vector3(2.51083, 4.18765, 0.401279)
 
@@ -128,6 +126,18 @@ tracks/0/keys = {
 "update": 0,
 "values": [Vector3(0, 0, 0)]
 }
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MeshInstance3D:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_05uk0"]
 _data = {
@@ -136,11 +146,8 @@ _data = {
 "RESET": SubResource("Animation_m4uy7")
 }
 
-[sub_resource type="BoxShape3D" id="BoxShape3D_2ykk7"]
-size = Vector3(0.5, 1, 0.1)
-
-[sub_resource type="BoxMesh" id="BoxMesh_k0jcs"]
-size = Vector3(0.5, 1, 0.1)
+[sub_resource type="BoxShape3D" id="BoxShape3D_cptic"]
+size = Vector3(0.638695, 0.704531, 0.315849)
 
 [node name="SingleDoorWindowed" type="Node3D"]
 script = ExtResource("1_u01bl")
@@ -166,8 +173,8 @@ skeleton = NodePath("")
 shape = SubResource("ConcavePolygonShape3D_x5ghl")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-mesh = ExtResource("4_whlqt")
-surface_material_override/0 = SubResource("StandardMaterial3D_etkou")
+mesh = ExtResource("4_exihb")
+surface_material_override/0 = ExtResource("5_r41h8")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
 
@@ -181,30 +188,30 @@ libraries = {
 }
 
 [node name="Button" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.64097, 2.15839, 0.741848)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.65284, 2.32164, 0.741848)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("6_lk3uv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Button"]
-shape = SubResource("BoxShape3D_2ykk7")
+shape = SubResource("BoxShape3D_cptic")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Button/CollisionShape3D"]
-mesh = SubResource("BoxMesh_k0jcs")
-surface_material_override/0 = ExtResource("7_b276h")
+mesh = ExtResource("7_q23j5")
+surface_material_override/0 = ExtResource("8_gypqm")
 
 [node name="Button2" type="Area3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.64833, 2.15839, -0.790406)
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -1.66226, 2.32164, -0.756797)
 collision_layer = 2
 collision_mask = 0
 script = ExtResource("6_lk3uv")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Button2"]
-shape = SubResource("BoxShape3D_2ykk7")
+shape = SubResource("BoxShape3D_cptic")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Button2/CollisionShape3D"]
-mesh = SubResource("BoxMesh_k0jcs")
-surface_material_override/0 = ExtResource("7_b276h")
+mesh = ExtResource("7_q23j5")
+surface_material_override/0 = ExtResource("8_gypqm")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="Button2" to="." method="_on_button_pressed"]

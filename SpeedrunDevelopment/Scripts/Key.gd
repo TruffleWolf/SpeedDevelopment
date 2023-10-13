@@ -5,5 +5,6 @@ extends Area3D
 
 
 func activate(who):
+	
 	who.keys_held.append(key_ID)
 	queue_free()
