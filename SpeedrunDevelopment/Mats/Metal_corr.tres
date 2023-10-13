@@ -1,0 +1,6 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b5hfrojs1c3u8"]
+
+[ext_resource type="Texture2D" uid="uid://dn38fpqxubfj0" path="res://Textures/Spatial/MetalCorroded512.png" id="1_0c35q"]
+
+[resource]
+albedo_texture = ExtResource("1_0c35q")

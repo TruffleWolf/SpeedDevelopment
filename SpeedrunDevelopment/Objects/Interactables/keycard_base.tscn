@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4mt8xkiu08t6"]
+
+[ext_resource type="Script" path="res://Scripts/Key.gd" id="1_f5kbp"]
+[ext_resource type="ArrayMesh" uid="uid://byx2v5hsua34n" path="res://Mesh/Textured/Keycard.obj" id="1_jahud"]
+[ext_resource type="Material" uid="uid://bhcba4jh0euj0" path="res://Mats/Keycards/keycard_base.tres" id="3_y1gve"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_duc5v"]
+size = Vector3(0.206933, 0.0155021, 0.132692)
+
+[node name="KeycardLevel" type="Area3D" groups=["Interactive"]]
+script = ExtResource("1_f5kbp")
+
+[node name="Card" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 0)
+mesh = ExtResource("1_jahud")
+surface_material_override/0 = ExtResource("3_y1gve")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_duc5v")

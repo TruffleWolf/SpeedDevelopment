@@ -46,7 +46,9 @@ func _physics_process(delta):
 			$Camera3D/HUD/Center/InteractIcon.show()
 			
 			if Input.is_action_just_pressed("Interact"):
+				
 				if held_prop ==null:
+					
 					$Camera3D/InteractRay.get_collider().activate(self)
 				elif held_prop != null:
 					held_prop.drop()

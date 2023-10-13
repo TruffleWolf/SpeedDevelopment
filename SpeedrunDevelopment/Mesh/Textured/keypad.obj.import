@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://i2d0qk8nv5db"
+path="res://.godot/imported/keypad.obj-5b15cb1ab97c0183aeea730b45c9b60d.mesh"
+
+[deps]
+
+files=["res://.godot/imported/keypad.obj-5b15cb1ab97c0183aeea730b45c9b60d.mesh"]
+
+source_file="res://Mesh/Textured/keypad.obj"
+dest_files=["res://.godot/imported/keypad.obj-5b15cb1ab97c0183aeea730b45c9b60d.mesh", "res://.godot/imported/keypad.obj-5b15cb1ab97c0183aeea730b45c9b60d.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
