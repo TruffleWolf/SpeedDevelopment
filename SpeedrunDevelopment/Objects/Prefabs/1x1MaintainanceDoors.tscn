@@ -1,0 +1,95 @@
+[gd_scene load_steps=11 format=3 uid="uid://dsdafmvvmsi5s"]
+
+[ext_resource type="PackedScene" uid="uid://co4nypggxhfvq" path="res://Objects/Environment/wall_corner_outer_a.tscn" id="1_neai1"]
+[ext_resource type="PackedScene" uid="uid://dcqhswyr1k0cd" path="res://Objects/Environment/wall_single_plain.tscn" id="2_6nnwy"]
+[ext_resource type="PackedScene" uid="uid://bhrhrv4xgeagr" path="res://Objects/Environment/Roof.tscn" id="3_p8v8l"]
+[ext_resource type="PackedScene" uid="uid://bc2sl1ckfsxd8" path="res://Objects/Environment/Floor.tscn" id="4_k3qpo"]
+[ext_resource type="PackedScene" uid="uid://dm6ncumk1qedc" path="res://Objects/Environment/wall_single_pipes.tscn" id="5_dtniu"]
+[ext_resource type="PackedScene" uid="uid://b06481hrbmjeq" path="res://Objects/Placeables/cabinet_wall_large_small_electronics.tscn" id="6_1qmqm"]
+[ext_resource type="PackedScene" uid="uid://3lnnjgx3vak8" path="res://Objects/Placeables/cabinet_wall_large_small_right_d.tscn" id="7_3trw7"]
+[ext_resource type="PackedScene" uid="uid://3ievss5yx2a8" path="res://Objects/Placeables/cabinet_wall_large_small_left_d.tscn" id="8_5hh3t"]
+[ext_resource type="PackedScene" uid="uid://sanmclbmlrbw" path="res://Objects/Placeables/cabinet_wall_large_small.tscn" id="9_3be2x"]
+[ext_resource type="PackedScene" uid="uid://behmdhsbau0go" path="res://Objects/Placeables/crate_rectangle.tscn" id="10_xg6ae"]
+
+[node name="1x1RoomNoDoors" type="Node3D"]
+
+[node name="WallCornerOuterA4" parent="." instance=ExtResource("1_neai1")]
+transform = Transform3D(1.19249e-08, 0, -1, 0, 1, 0, 1, 0, 1.19249e-08, 0, 0, 0)
+
+[node name="WallSinglePlain2" parent="WallCornerOuterA4" instance=ExtResource("2_6nnwy")]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 5, 0, 2.5)
+skeleton = NodePath("../..")
+
+[node name="WallSinglePlain3" parent="WallCornerOuterA4" instance=ExtResource("2_6nnwy")]
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, -1, 0, 1.19249e-08, -1.19209e-07, 0, 2.5)
+skeleton = NodePath("../..")
+
+[node name="RoofA512" parent="WallCornerOuterA4" instance=ExtResource("3_p8v8l")]
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, -1, 0, 1.19249e-08, 2.5, 0, 2.5)
+skeleton = NodePath("../..")
+
+[node name="WallCornerOuterA3" parent="WallCornerOuterA4" instance=ExtResource("1_neai1")]
+transform = Transform3D(7.54979e-08, 0, -1, 0, 1, 0, 1, 0, 7.54979e-08, 5, 0, 0)
+skeleton = NodePath("../..")
+
+[node name="FloorConcrete5" parent="WallCornerOuterA4" instance=ExtResource("4_k3qpo")]
+transform = Transform3D(1.19249e-08, 0, 1, 0, 1, 0, -1, 0, 1.19249e-08, 2.5, 0, 2.5)
+skeleton = NodePath("../..")
+
+[node name="WallSinglePipes5" parent="." instance=ExtResource("5_dtniu")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 0, 0, 2.5)
+
+[node name="Maintainance1x1" type="Node3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -0.5, 0, 1.5)
+
+[node name="CabinetWallLargeSmallElectronics" parent="Maintainance1x1" instance=ExtResource("6_1qmqm")]
+transform = Transform3D(-2.18557e-07, 0, 1, 0, 1, 0, -1, 0, -2.18557e-07, -1.5, 0.5, 3)
+skeleton = NodePath("../..")
+
+[node name="CabinetWallLargeSmallRightD" parent="Maintainance1x1/CabinetWallLargeSmallElectronics" instance=ExtResource("7_3trw7")]
+transform = Transform3D(-0.996195, 0, 0.087156, 0, 1, 0, -0.087156, 0, -0.996195, -0.150002, 0, 2.05)
+skeleton = NodePath("../../..")
+
+[node name="CabinetWallLargeSmallLeftD" parent="Maintainance1x1/CabinetWallLargeSmallElectronics" instance=ExtResource("8_5hh3t")]
+transform = Transform3D(-0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, -0.965926, 0.25, 0, 2.2)
+skeleton = NodePath("../../..")
+
+[node name="CabinetWallLargeSmall" parent="Maintainance1x1" instance=ExtResource("9_3be2x")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -1.5, 0.5, 1)
+skeleton = NodePath("../..")
+
+[node name="CabinetWallLargeSmallLeftD2" parent="Maintainance1x1/CabinetWallLargeSmall" instance=ExtResource("8_5hh3t")]
+transform = Transform3D(-1, 0, -1.03316e-07, 0, 1, 0, 1.03316e-07, 0, -1, 0, 0, 2)
+skeleton = NodePath("../../..")
+
+[node name="CabinetWallLargeSmallRightD" parent="Maintainance1x1/CabinetWallLargeSmall/CabinetWallLargeSmallLeftD2" instance=ExtResource("7_3trw7")]
+transform = Transform3D(-0.422618, 0, -0.906308, 0, 1, 0, 0.906308, 0, -0.422618, 2.2, 0, 0.600002)
+skeleton = NodePath("../../../..")
+
+[node name="CabinetWallLargeSmallElectronics2" parent="Maintainance1x1" instance=ExtResource("6_1qmqm")]
+transform = Transform3D(3.0598e-07, 0, -1, 0, 1, 0, 1, 0, 3.0598e-07, 3.5, 0.5, 1)
+skeleton = NodePath("../..")
+
+[node name="CabinetWallLargeSmallLeftD" parent="Maintainance1x1/CabinetWallLargeSmallElectronics2" instance=ExtResource("8_5hh3t")]
+transform = Transform3D(-1, 0, 7.15295e-08, 0, 1, 0, -7.15295e-08, 0, -1, 0, 0, 2)
+skeleton = NodePath("../../..")
+
+[node name="CabinetWallLargeSmallRightD" parent="Maintainance1x1/CabinetWallLargeSmallElectronics2/CabinetWallLargeSmallLeftD" instance=ExtResource("7_3trw7")]
+transform = Transform3D(1, 0, -1.90739e-07, 0, 1, 0, 1.90739e-07, 0, 1, 0, 0, 0)
+skeleton = NodePath("../../../..")
+
+[node name="CabinetWallLargeSmall2" parent="Maintainance1x1" instance=ExtResource("9_3be2x")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 3.5, 0.5, 3)
+skeleton = NodePath("../..")
+
+[node name="CabinetWallLargeSmallLeftD2" parent="Maintainance1x1/CabinetWallLargeSmall2" instance=ExtResource("8_5hh3t")]
+transform = Transform3D(-1, 0, -1.03316e-07, 0, 1, 0, 1.03316e-07, 0, -1, 0, 0, 2)
+skeleton = NodePath("../../..")
+
+[node name="CabinetWallLargeSmallRightD" parent="Maintainance1x1/CabinetWallLargeSmall2/CabinetWallLargeSmallLeftD2" instance=ExtResource("7_3trw7")]
+transform = Transform3D(0.965926, 0, -0.258819, 0, 1, 0, 0.258819, 0, 0.965926, 0.349998, 0, -0.200001)
+skeleton = NodePath("../../../..")
+
+[node name="CrateRectangle" parent="Maintainance1x1" instance=ExtResource("10_xg6ae")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 1, 0, 1)
+skeleton = NodePath("../..")

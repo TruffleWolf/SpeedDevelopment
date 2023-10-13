@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ceyxh1v3kvctg"
+path="res://.godot/imported/Crate_Rectangle.obj-a4c53a29f642938cd5ca765469980ff3.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Crate_Rectangle.obj-a4c53a29f642938cd5ca765469980ff3.mesh"]
+
+source_file="res://Mesh/Gabe/Crate_Rectangle.obj"
+dest_files=["res://.godot/imported/Crate_Rectangle.obj-a4c53a29f642938cd5ca765469980ff3.mesh", "res://.godot/imported/Crate_Rectangle.obj-a4c53a29f642938cd5ca765469980ff3.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

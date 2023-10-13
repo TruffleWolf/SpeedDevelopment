@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dljxi3fbjy8a0"
+path="res://.godot/imported/Crate_Square.obj-2f64167fc17db9957c2f8a3aa0ff8399.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Crate_Square.obj-2f64167fc17db9957c2f8a3aa0ff8399.mesh"]
+
+source_file="res://Mesh/Gabe/Crate_Square.obj"
+dest_files=["res://.godot/imported/Crate_Square.obj-2f64167fc17db9957c2f8a3aa0ff8399.mesh", "res://.godot/imported/Crate_Square.obj-2f64167fc17db9957c2f8a3aa0ff8399.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
