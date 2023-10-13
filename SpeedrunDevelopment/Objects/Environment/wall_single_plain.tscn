@@ -9,11 +9,13 @@ albedo_texture = ExtResource("2_2bjae")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_llaq4"]
 data = PackedVector3Array(-2, 0, 0.5, 2, 5, 0.5, 2, 0, 0.5, -2, 0, 0.5, 2, 0, 0, -2, 0, 0, 2, 5, 0.5, -2, 5, 0, 2, 5, 0, -2, 5, 0.5, 2, 5, 0.5, -2, 0, 0.5, 2, 0, 0.5, 2, 0, 0, -2, 0, 0.5, -2, 5, 0.5, -2, 5, 0, 2, 5, 0.5)
 
-[node name="WallSinglePlain" type="MeshInstance3D"]
+[node name="WallSinglePlain" type="Node3D"]
+
+[node name="WallSinglePlain" type="MeshInstance3D" parent="."]
 mesh = ExtResource("1_qb6ab")
 surface_material_override/0 = SubResource("StandardMaterial3D_e8p3c")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="."]
+[node name="StaticBody3D" type="StaticBody3D" parent="WallSinglePlain"]
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="WallSinglePlain/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_llaq4")
