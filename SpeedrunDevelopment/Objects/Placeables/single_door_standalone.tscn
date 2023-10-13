@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://b3ad5swt0glwg"]
+
+[ext_resource type="Script" path="res://Scripts/Door.gd" id="1_bbln1"]
+[ext_resource type="ArrayMesh" uid="uid://bqw43o8syycp6" path="res://Mesh/Textured/SingleDoorWindow.obj" id="2_u1etj"]
+[ext_resource type="Texture2D" uid="uid://syhdlid4yywy" path="res://Textures/Spatial/RustedMetal512.png" id="3_4vnkf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_etkou"]
+albedo_texture = ExtResource("3_4vnkf")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_iwp8u"]
+size = Vector3(2.51083, 4.18765, 0.401279)
+
+[node name="SingleDoorWindowed" type="Node3D"]
+script = ExtResource("1_bbln1")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_u1etj")
+surface_material_override/0 = SubResource("StandardMaterial3D_etkou")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.13902, 0)
+shape = SubResource("BoxShape3D_iwp8u")

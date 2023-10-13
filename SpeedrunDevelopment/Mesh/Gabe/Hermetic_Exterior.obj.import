@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bc3k263houw5k"
+path="res://.godot/imported/Hermetic_Exterior.obj-0f3ec31ac95d8b5b72218f5e5bf6828a.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Hermetic_Exterior.obj-0f3ec31ac95d8b5b72218f5e5bf6828a.mesh"]
+
+source_file="res://Mesh/Gabe/Hermetic_Exterior.obj"
+dest_files=["res://.godot/imported/Hermetic_Exterior.obj-0f3ec31ac95d8b5b72218f5e5bf6828a.mesh", "res://.godot/imported/Hermetic_Exterior.obj-0f3ec31ac95d8b5b72218f5e5bf6828a.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

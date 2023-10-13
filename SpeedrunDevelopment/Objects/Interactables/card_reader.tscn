@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://crqkfcxuir5lh"]
+
+[ext_resource type="ArrayMesh" uid="uid://df6a1nn817ye8" path="res://Mesh/Gabe/Card_Reader.obj" id="1_lfxru"]
+
+[node name="CardReader" type="Node3D"]
+
+[node name="CardReader" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_lfxru")

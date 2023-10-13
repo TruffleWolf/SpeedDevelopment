@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cjq6drgm7sjqx"
+path="res://.godot/imported/Breaker_Handle.obj-cbe3ab20d215439a58c990831abf6704.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Breaker_Handle.obj-cbe3ab20d215439a58c990831abf6704.mesh"]
+
+source_file="res://Mesh/Gabe/Breaker_Handle.obj"
+dest_files=["res://.godot/imported/Breaker_Handle.obj-cbe3ab20d215439a58c990831abf6704.mesh", "res://.godot/imported/Breaker_Handle.obj-cbe3ab20d215439a58c990831abf6704.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
