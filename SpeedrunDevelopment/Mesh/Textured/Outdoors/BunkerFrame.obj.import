@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cyje7d1rkjtbo"
+path="res://.godot/imported/BunkerFrame.obj-3853a4d8978bc69d17c02720cba7fb8b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BunkerFrame.obj-3853a4d8978bc69d17c02720cba7fb8b.mesh"]
+
+source_file="res://Mesh/Textured/Outdoors/BunkerFrame.obj"
+dest_files=["res://.godot/imported/BunkerFrame.obj-3853a4d8978bc69d17c02720cba7fb8b.mesh", "res://.godot/imported/BunkerFrame.obj-3853a4d8978bc69d17c02720cba7fb8b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
