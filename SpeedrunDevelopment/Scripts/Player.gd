@@ -2,7 +2,7 @@ extends CharacterBody3D
 
 
 @onready var active_weapon = 3
-@export var RUN_SPEED = 5.0
+@export var RUN_SPEED = 10.0
 const WALK_SPEED = 2.5
 const CROUCH_SPEED = 2.0
 const MOVE_ACCEL = 0.1

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://ct3ee8ytk5yyi"
+path="res://.godot/imported/BunkerDoorB.obj-a38eefb24c43c5dc19cf21eec5e2679f.mesh"
+
+[deps]
+
+files=["res://.godot/imported/BunkerDoorB.obj-a38eefb24c43c5dc19cf21eec5e2679f.mesh"]
+
+source_file="res://Mesh/Textured/Outdoors/BunkerDoorB.obj"
+dest_files=["res://.godot/imported/BunkerDoorB.obj-a38eefb24c43c5dc19cf21eec5e2679f.mesh", "res://.godot/imported/BunkerDoorB.obj-a38eefb24c43c5dc19cf21eec5e2679f.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true

@@ -2,16 +2,17 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://j1lompa7npp6"
-path="res://.godot/imported/Grass256.png-7ea76f61d4b938e95999cd34f4353ed4.ctex"
+uid="uid://4c657rcy5d2n"
+path.s3tc="res://.godot/imported/ConcretPlates512.png-90f0bef7b490b8f63adc7dd6bc820d9a.s3tc.ctex"
 metadata={
-"vram_texture": false
+"imported_formats": ["s3tc_bptc"],
+"vram_texture": true
 }
 
 [deps]
 
-source_file="res://Textures/Spatial/Grass256.png"
-dest_files=["res://.godot/imported/Grass256.png-7ea76f61d4b938e95999cd34f4353ed4.ctex"]
+source_file="res://Textures/Spatial/ConcretPlates512.png"
+dest_files=["res://.godot/imported/ConcretPlates512.png-90f0bef7b490b8f63adc7dd6bc820d9a.s3tc.ctex"]
 
 [params]
 
