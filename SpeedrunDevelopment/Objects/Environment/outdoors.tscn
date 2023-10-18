@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://0ek7bgrbgrte"]
+[gd_scene load_steps=26 format=3 uid="uid://0ek7bgrbgrte"]
 
 [ext_resource type="ArrayMesh" uid="uid://kvohihy7dkly" path="res://Mesh/Textured/Outdoors/Environment.obj" id="1_1vang"]
 [ext_resource type="Texture2D" uid="uid://dosinmfhdls4s" path="res://Textures/Spatial/OuterPavement512.png" id="2_ur4v7"]
@@ -8,7 +8,15 @@
 [ext_resource type="Texture2D" uid="uid://4c657rcy5d2n" path="res://Textures/Spatial/ConcretPlates512.png" id="8_dr6ur"]
 [ext_resource type="ArrayMesh" uid="uid://bvl6n4e0dl0uv" path="res://Mesh/Textured/Outdoors/BunkerDoorA.obj" id="9_i10x4"]
 [ext_resource type="Material" uid="uid://b5hfrojs1c3u8" path="res://Mats/Metal_corr.tres" id="10_6i0xj"]
+[ext_resource type="ArrayMesh" uid="uid://cilsagdybl57t" path="res://Mesh/Textured/Outdoors/TreeA.obj" id="10_awena"]
+[ext_resource type="Material" uid="uid://bbxni630bivk5" path="res://Mats/Tree.tres" id="11_rrc14"]
 [ext_resource type="ArrayMesh" uid="uid://ct3ee8ytk5yyi" path="res://Mesh/Textured/Outdoors/BunkerDoorB.obj" id="11_tyeyw"]
+[ext_resource type="ArrayMesh" uid="uid://dwye6kcxvatyb" path="res://Mesh/Textured/Outdoors/TreeB.obj" id="12_6xrd4"]
+[ext_resource type="ArrayMesh" uid="uid://pmmd1f70sa43" path="res://Mesh/Textured/Outdoors/TreeC.obj" id="13_ci5tj"]
+[ext_resource type="ArrayMesh" uid="uid://bg7h24k10cxss" path="res://Mesh/Textured/Outdoors/RockA.obj" id="14_0i8aa"]
+[ext_resource type="Material" uid="uid://cpkh0ojmf4p18" path="res://Mats/rock.tres" id="15_tk15v"]
+[ext_resource type="ArrayMesh" uid="uid://xp50uwitj1on" path="res://Mesh/Textured/Outdoors/RockB.obj" id="16_frc2e"]
+[ext_resource type="ArrayMesh" uid="uid://c7jbm2c3m4c20" path="res://Mesh/Textured/Outdoors/RockC.obj" id="17_g5rio"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_i8332"]
 albedo_texture = ExtResource("2_ur4v7")
@@ -128,3 +136,34 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.9451, 1.16723, 0)
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Bounds"]
 shape = SubResource("BoxShape3D_gs8kj")
+
+[node name="Props" type="Node3D" parent="."]
+
+[node name="TreeA" type="MeshInstance3D" parent="Props"]
+transform = Transform3D(0.663835, 0.0495649, -0.746235, 0, 0.997801, 0.0662739, 0.747879, -0.0439949, 0.662375, -8.1041, 3.63271, -10.8248)
+mesh = ExtResource("10_awena")
+surface_material_override/0 = ExtResource("11_rrc14")
+
+[node name="TreeB" type="MeshInstance3D" parent="Props"]
+transform = Transform3D(0.992608, -0.00448967, 0.121284, 0, 0.999316, 0.0369925, -0.121367, -0.0367191, 0.991928, -2.92617, 0, 3.31454)
+mesh = ExtResource("12_6xrd4")
+surface_material_override/0 = ExtResource("11_rrc14")
+
+[node name="TreeC" type="MeshInstance3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97609, 1.2672, 15.5649)
+mesh = ExtResource("13_ci5tj")
+surface_material_override/0 = ExtResource("11_rrc14")
+
+[node name="RockA" type="MeshInstance3D" parent="Props"]
+transform = Transform3D(-0.990715, 0, -0.135958, 0, 1, 0, 0.135958, 0, -0.990715, 5.98667, 0.278166, -5.86254)
+mesh = ExtResource("14_0i8aa")
+
+[node name="RockB" type="MeshInstance3D" parent="Props"]
+transform = Transform3D(0.884866, 0, 0.465846, 0.10507, 0.974232, -0.199578, -0.453843, 0.225546, 0.862065, -3.04634, -0.00637364, -2.75524)
+mesh = ExtResource("16_frc2e")
+surface_material_override/0 = ExtResource("15_tk15v")
+
+[node name="RockC" type="MeshInstance3D" parent="Props"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87462, -1.64504, 0)
+mesh = ExtResource("17_g5rio")
+surface_material_override/0 = ExtResource("15_tk15v")
