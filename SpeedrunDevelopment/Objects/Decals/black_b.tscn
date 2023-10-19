@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc1sec2uswqip"]
+
+[ext_resource type="Texture2D" uid="uid://cw6ehc58lsrtd" path="res://Textures/Decals/Black_stain2.png" id="1_fns1u"]
+
+[node name="BlackB" type="Decal"]
+size = Vector3(2, 0.1, 2)
+texture_albedo = ExtResource("1_fns1u")

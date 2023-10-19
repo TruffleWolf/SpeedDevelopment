@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://djoq6wk3oieda"]
+
+[ext_resource type="Texture2D" uid="uid://d2rb6vexid7qc" path="res://Textures/Decals/tan_masked_S.png" id="1_5puws"]
+
+[node name="Tan" type="Decal"]
+size = Vector3(2, 0.1, 1.5)
+texture_albedo = ExtResource("1_5puws")

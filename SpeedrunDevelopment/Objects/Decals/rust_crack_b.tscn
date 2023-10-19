@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dodvr7o4calvg"]
+
+[ext_resource type="Texture2D" uid="uid://cxexffwjvfg27" path="res://Textures/Decals/Rust_cracked.png" id="1_nl8bl"]
+
+[node name="Rust_crackB" type="Decal"]
+size = Vector3(2, 0.1, 1)
+texture_albedo = ExtResource("1_nl8bl")

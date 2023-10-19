@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cgg0vp7us7ib8"]
+
+[ext_resource type="Texture2D" uid="uid://d4ii8yncx2n1j" path="res://Textures/Decals/Rust_streak_wide.png" id="1_ycq0u"]
+
+[node name="Rust_Wide" type="Decal"]
+size = Vector3(2, 0.1, 2)
+texture_albedo = ExtResource("1_ycq0u")

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://enrh3a4prl1r"]
+
+[ext_resource type="Texture2D" uid="uid://b664ir76efqx4" path="res://Textures/Decals/Green_2.png" id="1_boi65"]
+
+[node name="GreenB" type="Decal"]
+size = Vector3(2, 0.1, 0.6)
+texture_albedo = ExtResource("1_boi65")

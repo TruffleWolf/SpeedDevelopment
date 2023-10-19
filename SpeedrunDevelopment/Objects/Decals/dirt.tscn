@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ba5fj2uhdvako"]
+
+[ext_resource type="Texture2D" uid="uid://op32sigytr80" path="res://Textures/Decals/Dirt.png" id="1_60q0x"]
+
+[node name="Dirt" type="Decal"]
+size = Vector3(2, 0.1, 2)
+texture_albedo = ExtResource("1_60q0x")
