@@ -1,14 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://sanmclbmlrbw"]
+[gd_scene load_steps=4 format=3 uid="uid://sanmclbmlrbw"]
 
-[ext_resource type="ArrayMesh" uid="uid://dy3yad40tl63d" path="res://Mesh/Gabe/Cabinet_Wall_Large_Small.obj" id="1_exnyv"]
+[ext_resource type="ArrayMesh" uid="uid://bhegpify67s3f" path="res://Mesh/Textured/Small_Cabinet_empty.obj" id="1_xpvqr"]
+[ext_resource type="Material" uid="uid://b6xsq6gj26j5r" path="res://Mats/Metal_Rusted2.tres" id="2_c7ph6"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_b4qke"]
-data = PackedVector3Array(-1, 2, 0.5, -1, 4, 1, -1, 2, 1, 1, 2, 1, 1, 4, 0.5, 1, 2, 0.5, -0.95, 2.05, 0.5634, 0.95, 2.05, 1, -0.95, 2.05, 1, -1, 2, 1, 1, 2, 0.5, -1, 2, 0.5, 1, 4, 1, -1, 4, 0.5, 1, 4, 0.5, -1, 2, 1, -0.95, 3.95, 1, -0.95, 2.05, 1, 1, 4, 1, 0.95, 2.05, 1, 0.95, 3.95, 1, 1, 2, 1, -0.95, 2.05, 1, 0.95, 2.05, 1, -1, 4, 1, 0.95, 3.95, 1, -0.95, 3.95, 1, -0.95, 2.05, 0.5634, 0.95, 3.95, 0.5634, 0.95, 2.05, 0.5634, -0.95, 3.95, 0.5634, -0.95, 2.05, 1, -0.95, 3.95, 1, 0.95, 3.95, 0.5634, -0.95, 3.95, 1, 0.95, 3.95, 1, 0.95, 2.05, 0.5634, 0.95, 3.95, 1, 0.95, 2.05, 1, -0.9738, 2.975, 0.925, 0.9738, 3.025, 0.925, 0.9738, 2.975, 0.925, -0.9738, 2.975, 0.925, 0.9738, 2.975, 0.525, -0.9738, 2.975, 0.525, 0.9738, 3.025, 0.925, -0.9738, 3.025, 0.525, 0.9738, 3.025, 0.525, -1, 2, 1, -1, 1.5, 0.5, -1, 2, 0.5, -0.93, 2, 0.5, -0.93, 1.5, 0.5, -0.93, 2, 1, -1, 1.5, 0.5, -0.93, 2, 1, -0.93, 1.5, 0.5, 0.93, 2, 1, 0.93, 1.5, 0.5, 0.93, 2, 0.5, 1, 2, 0.5, 1, 1.5, 0.5, 1, 2, 1, 0.93, 1.5, 0.5, 1, 2, 1, 1, 1.5, 0.5, -1, 4, 0.5, -1, 4, 1, -1, 2, 0.5, 1, 4, 1, 1, 4, 0.5, 1, 2, 1, 0.95, 2.05, 0.5634, 0.95, 2.05, 1, -0.95, 2.05, 0.5634, 1, 2, 1, 1, 2, 0.5, -1, 2, 1, -1, 4, 1, -1, 4, 0.5, 1, 4, 1, -1, 4, 1, -0.95, 3.95, 1, -1, 2, 1, 1, 2, 1, 0.95, 2.05, 1, 1, 4, 1, -1, 2, 1, -0.95, 2.05, 1, 1, 2, 1, 1, 4, 1, 0.95, 3.95, 1, -1, 4, 1, -0.95, 3.95, 0.5634, 0.95, 3.95, 0.5634, -0.95, 2.05, 0.5634, -0.95, 2.05, 0.5634, -0.95, 2.05, 1, -0.95, 3.95, 0.5634, -0.95, 3.95, 0.5634, -0.95, 3.95, 1, 0.95, 3.95, 0.5634, 0.95, 3.95, 0.5634, 0.95, 3.95, 1, 0.95, 2.05, 0.5634, -0.9738, 3.025, 0.925, 0.9738, 3.025, 0.925, -0.9738, 2.975, 0.925, 0.9738, 2.975, 0.925, 0.9738, 2.975, 0.525, -0.9738, 2.975, 0.925, -0.9738, 3.025, 0.925, -0.9738, 3.025, 0.525, 0.9738, 3.025, 0.925, -1, 2, 1, -0.93, 2, 1, -1, 1.5, 0.5, 0.93, 2, 1, 1, 2, 1, 0.93, 1.5, 0.5)
+[sub_resource type="BoxShape3D" id="BoxShape3D_xjp0d"]
+size = Vector3(2.01413, 2.44608, 0.495444)
 
-[node name="CabinetWallLargeSmall" type="MeshInstance3D"]
-mesh = ExtResource("1_exnyv")
+[node name="CabinetWallSmall" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = ExtResource("1_xpvqr")
+skeleton = NodePath("")
+surface_material_override/0 = ExtResource("2_c7ph6")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_b4qke")
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.78316, 0.748877)
+shape = SubResource("BoxShape3D_xjp0d")
