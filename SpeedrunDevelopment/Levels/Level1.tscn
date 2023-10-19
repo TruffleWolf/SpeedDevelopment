@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://co4nypggxhfvq" path="res://Objects/Environment/wall_corner_outer_a.tscn" id="4_r3pu6"]
 [ext_resource type="PackedScene" uid="uid://bhrhrv4xgeagr" path="res://Objects/Environment/Roof.tscn" id="5_d1eos"]
 [ext_resource type="Texture2D" uid="uid://4c657rcy5d2n" path="res://Textures/Spatial/ConcretPlates512.png" id="6_wlm3t"]
-[ext_resource type="PackedScene" path="res://Objects/Placeables/desk_small.tscn" id="7_dmecs"]
+[ext_resource type="PackedScene" uid="uid://cx1rq1ku45exx" path="res://Objects/Placeables/desk_small.tscn" id="7_dmecs"]
 [ext_resource type="Texture2D" uid="uid://didkt01dbh1cn" path="res://Textures/Spatial/WoodSanded.png" id="8_sawe1"]
 [ext_resource type="Texture2D" uid="uid://dttj06d14224b" path="res://Textures/Spatial/MetalGalv512.png" id="9_d03iq"]
 [ext_resource type="PackedScene" uid="uid://bbn0po2qm1dt4" path="res://Objects/Placeables/chair_small.tscn" id="10_p0ijj"]

@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://njju1ahiu2sb"]
+
+[ext_resource type="Texture2D" uid="uid://bopb0ltw1ubt" path="res://Textures/Decals/Black_streak.png" id="1_evyjr"]
+
+[node name="BlackS" type="Decal"]
+size = Vector3(2, 0.1, 0.6)
+texture_albedo = ExtResource("1_evyjr")

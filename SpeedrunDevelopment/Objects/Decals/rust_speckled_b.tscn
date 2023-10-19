@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpaaja2arjut7"]
+
+[ext_resource type="Texture2D" uid="uid://djm6oysltdw3d" path="res://Textures/Decals/Rust_speckled_large.png" id="1_6g56d"]
+
+[node name="Rust_SpeckledB" type="Decal"]
+size = Vector3(2, 0.1, 1.5)
+texture_albedo = ExtResource("1_6g56d")

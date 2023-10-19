@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://gxe286k3itm4"]
+
+[ext_resource type="Texture2D" uid="uid://btkxxi1281kym" path="res://Textures/Decals/orange_stain.png" id="1_etpr2"]
+
+[node name="Orange" type="Decal"]
+size = Vector3(0.8, 0.1, 2)
+texture_albedo = ExtResource("1_etpr2")
