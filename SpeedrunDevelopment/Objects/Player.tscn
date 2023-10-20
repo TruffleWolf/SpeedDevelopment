@@ -1,7 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://du2c2x0l2qsvg"]
+[gd_scene load_steps=12 format=3 uid="uid://du2c2x0l2qsvg"]
 
 [ext_resource type="Script" path="res://Scripts/Player.gd" id="1_8xh38"]
 [ext_resource type="Texture2D" uid="uid://cnqhfxpu7u6q" path="res://Textures/Sprite/circle_05.png" id="2_g1e8r"]
+[ext_resource type="AudioStream" uid="uid://vq1y812ng7us" path="res://Audio/Stone footstep 1.wav" id="3_b2mka"]
+[ext_resource type="AudioStream" uid="uid://cs43njx4o45fk" path="res://Audio/Stone footstep 2.wav" id="4_560wd"]
+[ext_resource type="AudioStream" uid="uid://ct6jywtn8a3wo" path="res://Audio/Stone footstep 3.wav" id="5_k106f"]
+[ext_resource type="AudioStream" uid="uid://ljevycg32w2c" path="res://Audio/Tunnel_Ambience.ogg" id="6_mlwtu"]
+[ext_resource type="AudioStream" uid="uid://gplvas7rnj0r" path="res://Audio/ClickHigh.wav" id="7_5s058"]
+[ext_resource type="AudioStream" uid="uid://cpswsopq5yhnr" path="res://Audio/ClickLow.wav" id="8_ths56"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_1bm47"]
 
@@ -13,7 +19,6 @@ radius = 0.45
 
 [node name="CharacterBody3D" type="CharacterBody3D"]
 transform = Transform3D(1.75, 0, 0, 0, 1.75, 0, 0, 0, 1.75, 0, 0, 0)
-collision_layer = 0
 script = ExtResource("1_8xh38")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
@@ -74,11 +79,48 @@ grow_vertical = 2
 texture = ExtResource("2_g1e8r")
 expand_mode = 2
 
+[node name="DebugLabel" type="Label" parent="Camera3D/HUD"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="SpotLight3D" type="SpotLight3D" parent="Camera3D"]
+light_energy = 3.0
+spot_range = 20.0
+
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.806276, 0)
 shape = SubResource("CylinderShape3D_yy11l")
 
+[node name="LeftFoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_b2mka")
+volume_db = -24.0
+
+[node name="RightFoot" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_560wd")
+volume_db = -24.0
+
+[node name="ThirdFoot" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0, -0.874527, 0)
+stream = ExtResource("5_k106f")
+volume_db = -12.0
+max_db = -3.0
+
+[node name="Flashlight" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(0.571429, 0, 0, 0, 0.571429, 0, 0, 0, 0.571429, 0, 0.364745, 0)
+
+[node name="Ambience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_mlwtu")
+
+[node name="LightOn" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_5s058")
+
+[node name="LightOff" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ths56")
+
 [connection signal="body_entered" from="Area3D" to="." method="_on_area_3d_body_entered"]
 [connection signal="body_exited" from="Area3D" to="." method="_on_area_3d_body_exited"]
+[connection signal="finished" from="LeftFoot" to="." method="_on_leftfoot_finished"]
+[connection signal="finished" from="RightFoot" to="." method="_on_right_foot_finished"]

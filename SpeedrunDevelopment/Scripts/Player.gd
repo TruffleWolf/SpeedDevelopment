@@ -15,11 +15,15 @@ var accuracy_mod = 0.0
 var floor_collisions = []
 var keys_held = []
 var held_prop = null
+@onready var footstep_primed = true
+@onready var target_light_energy = 3.0
+@onready var light_rotation = Quaternion($Camera3D/SpotLight3D.global_transform.basis)
 
 
 func _ready():
 	add_to_group("Player")
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+	$Ambience.play()
 
 
 func _input(event):
@@ -35,11 +39,28 @@ func _input(event):
 func _physics_process(delta):
 	if playmode:
 		
+		light_rotation = light_rotation.slerp(Quaternion($Camera3D.global_transform.basis),.3)
+		$Camera3D/SpotLight3D.global_transform.basis = Basis(light_rotation)
+		$Camera3D/HUD/DebugLabel.text = str($Camera3D/SpotLight3D.global_rotation)+"/"+str($Camera3D.global_rotation)
+		
+		if abs($Camera3D/SpotLight3D.light_energy- target_light_energy)<.01:
+			target_light_energy = GameManager.RNG.randf_range(.1,3.0)
+		elif $Camera3D/SpotLight3D.light_energy<target_light_energy:
+			$Camera3D/SpotLight3D.light_energy +=.001
+		elif $Camera3D/SpotLight3D.light_energy>target_light_energy:
+			$Camera3D/SpotLight3D.light_energy -=.001
 		if Input.is_action_just_pressed("ui_cancel"):
 			playmode = false
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		
 		
+		if Input.is_action_just_pressed("Flashlight"):
+			if $Camera3D/SpotLight3D.visible:
+				$LightOff.play()
+			else:
+				$LightOn.play()
+				$Camera3D/SpotLight3D.light_energy = 3.0
+			$Camera3D/SpotLight3D.visible = !$Camera3D/SpotLight3D.visible
 		
 		if $Camera3D/InteractRay.is_colliding():
 			
@@ -95,6 +116,9 @@ func movement():
 	velocity.y = fall_speed
 	move_and_slide()
 	
+#	if direction.length()> 0 and footstep_primed:
+#		$RightFoot.play()
+#		footstep_primed = false
 
 func get_grabpoint():
 	return $Camera3D/HoldPoint.global_transform
@@ -107,3 +131,18 @@ func _on_area_3d_body_entered(body):
 
 func _on_area_3d_body_exited(body):
 	floor_collisions.erase(body)
+
+
+func _on_leftfoot_finished():
+	if direction.length() > 0:
+		$RightFoot.play()
+		return
+	footstep_primed = true
+	
+
+
+func _on_right_foot_finished():
+	if direction.length() > 0:
+		$LeftFoot.play()
+		return
+	footstep_primed = true
