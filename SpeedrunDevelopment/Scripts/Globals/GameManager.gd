@@ -13,3 +13,8 @@ var debug_mode = true
 var enemy_team = []
 
 var timer_modifiers = []
+
+var RNG = RandomNumberGenerator.new()
+
+func _ready():
+	RNG.randomize()

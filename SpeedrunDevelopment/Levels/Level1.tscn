@@ -1,4 +1,4 @@
-[gd_scene load_steps=56 format=3 uid="uid://b4d7b0ftlbdlt"]
+[gd_scene load_steps=59 format=3 uid="uid://b4d7b0ftlbdlt"]
 
 [ext_resource type="PackedScene" uid="uid://du2c2x0l2qsvg" path="res://Objects/Player.tscn" id="1_o6bpi"]
 [ext_resource type="PackedScene" uid="uid://bc2sl1ckfsxd8" path="res://Objects/Environment/Floor.tscn" id="2_88cp0"]
@@ -80,12 +80,22 @@ albedo_texture = ExtResource("8_sawe1")
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_llaq4"]
 data = PackedVector3Array(-2, 0, 0.5, 2, 5, 0.5, 2, 0, 0.5, -2, 0, 0.5, 2, 0, 0, -2, 0, 0, 2, 5, 0.5, -2, 5, 0, 2, 5, 0, -2, 5, 0.5, 2, 5, 0.5, -2, 0, 0.5, 2, 0, 0.5, 2, 0, 0, -2, 0, 0.5, -2, 5, 0.5, -2, 5, 0, 2, 5, 0.5)
 
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_vebse"]
+
+[sub_resource type="Sky" id="Sky_qgfcu"]
+sky_material = SubResource("ProceduralSkyMaterial_vebse")
+
+[sub_resource type="Environment" id="Environment_0x348"]
+background_mode = 2
+sky = SubResource("Sky_qgfcu")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+
 [node name="TestLevel1" type="Node3D"]
 
 [node name="CharacterBody3D" parent="." instance=ExtResource("1_o6bpi")]
 transform = Transform3D(-1.75, 0, -1.5299e-07, 0, 1.75, 0, 1.5299e-07, 0, -1.75, -24, 2, -24.5)
-
-[node name="SpotLight3D" type="SpotLight3D" parent="CharacterBody3D"]
 
 [node name="3x3StartingRoom" type="Node3D" parent="."]
 
@@ -1692,6 +1702,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.5)
 
 [node name="Darkness1" type="OmniLight3D" parent="EntryNon-Playable"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 19.5, 2, 1.5)
+visible = false
 light_energy = 2.617
 light_indirect_energy = 1.98
 light_volumetric_fog_energy = 4.729
@@ -1704,6 +1715,7 @@ omni_shadow_mode = 0
 
 [node name="Darkness2" type="OmniLight3D" parent="EntryNon-Playable"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.5, 2, 1.5)
+visible = false
 light_energy = 2.617
 light_indirect_energy = 1.98
 light_volumetric_fog_energy = 4.729
@@ -1960,3 +1972,6 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -40.5,
 
 [node name="ExitStaircase_with_walls" parent="." instance=ExtResource("48_xcxb8")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5, 0, 116.5)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_0x348")
