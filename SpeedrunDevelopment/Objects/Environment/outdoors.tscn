@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://0ek7bgrbgrte"]
+[gd_scene load_steps=27 format=3 uid="uid://0ek7bgrbgrte"]
 
 [ext_resource type="ArrayMesh" uid="uid://kvohihy7dkly" path="res://Mesh/Textured/Outdoors/Environment.obj" id="1_1vang"]
 [ext_resource type="Texture2D" uid="uid://dosinmfhdls4s" path="res://Textures/Spatial/OuterPavement512.png" id="2_ur4v7"]
@@ -88,6 +88,9 @@ _data = {
 "RESET": SubResource("Animation_wyd8o")
 }
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_q3ha1"]
+size = Vector3(1.3998, 3.29456, 2.85843)
+
 [sub_resource type="BoxShape3D" id="BoxShape3D_4edfd"]
 size = Vector3(19.1, 0.1, 12.768)
 
@@ -97,6 +100,7 @@ size = Vector3(1, 3.86171, 9.58611)
 [node name="Outdoors" type="Node3D"]
 
 [node name="Environ" type="MeshInstance3D" parent="."]
+layers = 3
 mesh = ExtResource("1_1vang")
 surface_material_override/0 = SubResource("StandardMaterial3D_i8332")
 surface_material_override/1 = SubResource("StandardMaterial3D_fxipq")
@@ -106,6 +110,7 @@ surface_material_override/4 = ExtResource("5_dgxmr")
 surface_material_override/5 = ExtResource("5_dgxmr")
 
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+layers = 3
 mesh = ExtResource("7_eextn")
 surface_material_override/0 = SubResource("StandardMaterial3D_w165a")
 
@@ -117,13 +122,28 @@ libraries = {
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2423, 0, 3.27535)
+visible = false
+layers = 3
 mesh = ExtResource("9_i10x4")
 surface_material_override/0 = ExtResource("10_6i0xj")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/MeshInstance3D/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8225, 1.71999, -1.78677)
+shape = SubResource("BoxShape3D_q3ha1")
+
 [node name="MeshInstance3D2" type="MeshInstance3D" parent="MeshInstance3D2"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 26.2498, 0, -3.26628)
+layers = 3
 mesh = ExtResource("11_tyeyw")
 surface_material_override/0 = ExtResource("10_6i0xj")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D2/MeshInstance3D2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D2/MeshInstance3D2/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.8225, 1.71999, 1.90553)
+shape = SubResource("BoxShape3D_q3ha1")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -141,29 +161,35 @@ shape = SubResource("BoxShape3D_gs8kj")
 
 [node name="TreeA" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(0.663835, 0.0495649, -0.746235, 0, 0.997801, 0.0662739, 0.747879, -0.0439949, 0.662375, -8.1041, 3.63271, -10.8248)
+layers = 3
 mesh = ExtResource("10_awena")
 surface_material_override/0 = ExtResource("11_rrc14")
 
 [node name="TreeB" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(0.992608, -0.00448967, 0.121284, 0, 0.999316, 0.0369925, -0.121367, -0.0367191, 0.991928, -2.92617, 0, 3.31454)
+layers = 3
 mesh = ExtResource("12_6xrd4")
 surface_material_override/0 = ExtResource("11_rrc14")
 
 [node name="TreeC" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.97609, 1.2672, 15.5649)
+layers = 3
 mesh = ExtResource("13_ci5tj")
 surface_material_override/0 = ExtResource("11_rrc14")
 
 [node name="RockA" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(-0.990715, 0, -0.135958, 0, 1, 0, 0.135958, 0, -0.990715, 5.98667, 0.278166, -5.86254)
+layers = 3
 mesh = ExtResource("14_0i8aa")
 
 [node name="RockB" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(0.884866, 0, 0.465846, 0.10507, 0.974232, -0.199578, -0.453843, 0.225546, 0.862065, -3.04634, -0.00637364, -2.75524)
+layers = 3
 mesh = ExtResource("16_frc2e")
 surface_material_override/0 = ExtResource("15_tk15v")
 
 [node name="RockC" type="MeshInstance3D" parent="Props"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.87462, -1.64504, 0)
+layers = 3
 mesh = ExtResource("17_g5rio")
 surface_material_override/0 = ExtResource("15_tk15v")

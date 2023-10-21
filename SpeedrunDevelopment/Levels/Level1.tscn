@@ -1,4 +1,4 @@
-[gd_scene load_steps=59 format=3 uid="uid://b4d7b0ftlbdlt"]
+[gd_scene load_steps=60 format=3 uid="uid://b4d7b0ftlbdlt"]
 
 [ext_resource type="PackedScene" uid="uid://du2c2x0l2qsvg" path="res://Objects/Player.tscn" id="1_o6bpi"]
 [ext_resource type="PackedScene" uid="uid://bc2sl1ckfsxd8" path="res://Objects/Environment/Floor.tscn" id="2_88cp0"]
@@ -48,6 +48,7 @@
 [ext_resource type="PackedScene" uid="uid://g58v4vfy4o5y" path="res://Objects/Interactables/keycard_base_bluelvl2.tscn" id="46_7mxok"]
 [ext_resource type="PackedScene" uid="uid://0ek7bgrbgrte" path="res://Objects/Environment/outdoors.tscn" id="47_ot1dg"]
 [ext_resource type="PackedScene" uid="uid://cj3ym1mgo1q6t" path="res://Objects/Environment/staircase_with_walls.tscn" id="48_xcxb8"]
+[ext_resource type="PackedScene" uid="uid://r84t5ls0n2dx" path="res://Objects/Placeables/Lamp.tscn" id="49_goa3o"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_sdo0u"]
 albedo_texture = ExtResource("6_wlm3t")
@@ -278,6 +279,7 @@ transform = Transform3D(-3.93402e-07, 0, 1, 0, 1, 0, -1, 0, -3.93402e-07, -27.21
 
 [node name="DoorLevel0-ToLocker" parent="3x3StartingRoom" instance=ExtResource("13_0tmjx")]
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -21, 0, -18.5)
+key_required = 0
 
 [node name="StartingOneWay" type="Node3D" parent="3x3StartingRoom"]
 
@@ -354,7 +356,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.4, 0, 0)
 transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -8.35, 0, 2.9)
 
 [node name="DeskSmall2" parent="3x3EntryRoom/CabinetFiling3x3Room1" instance=ExtResource("7_dmecs")]
-transform = Transform3D(1.31134e-07, 0, 1, 0, 1, 0, -1, 0, 1.31134e-07, -4.35, 0, 2.9)
+transform = Transform3D(0.703283, 0.318627, 0.635508, 7.45058e-09, 0.893935, -0.448196, -0.71091, 0.315209, 0.62869, -6.79534, 0.87642, 3.95449)
 
 [node name="ChairSmall" parent="3x3EntryRoom/CabinetFiling3x3Room1" instance=ExtResource("10_p0ijj")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.85, 0, 1.3)
@@ -618,6 +620,7 @@ transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 6, 0, 
 
 [node name="DoorLevel0-ToLocker" parent="CorridorEntry3x3" instance=ExtResource("13_0tmjx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -6, 0, 2.5)
+key_required = 0
 
 [node name="DoorLevel0-Starting" parent="CorridorEntry3x3" instance=ExtResource("13_0tmjx")]
 transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -19, 0, 2.5)
@@ -1975,3 +1978,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -40.5, 0, 116.5)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_0x348")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.812082, 0.146075, -0.564964, 0.388694, 0.586716, 0.710409, 0.435246, -0.796509, 0.419684, -38.8294, 25.0102, 168.679)
+layers = 2
+light_cull_mask = 4294967262
+shadow_enabled = true
+
+[node name="OmniLight3D" parent="Lights" instance=ExtResource("49_goa3o")]
+transform = Transform3D(1, -7.17753e-23, -4.37114e-08, 4.37114e-08, 1.64203e-15, 1, 0, -1, 1.64203e-15, -20.9372, 4.58044, -19.655)

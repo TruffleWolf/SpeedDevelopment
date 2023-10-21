@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://r84t5ls0n2dx"]
+
+[ext_resource type="ArrayMesh" uid="uid://bqbkm7t511qlh" path="res://Mesh/Textured/Lamp.obj" id="1_0pc3r"]
+[ext_resource type="Texture2D" uid="uid://id4g33c0qfio" path="res://Textures/Spatial/Lamp.png" id="2_053b2"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ayyt3"]
+albedo_texture = ExtResource("2_053b2")
+
+[node name="OmniLight3D" type="OmniLight3D"]
+shadow_enabled = true
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, -0.404815, 0)
+mesh = ExtResource("1_0pc3r")
+surface_material_override/0 = SubResource("StandardMaterial3D_ayyt3")
