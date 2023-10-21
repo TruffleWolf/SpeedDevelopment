@@ -44,7 +44,7 @@ func _physics_process(delta):
 		$Camera3D/HUD/DebugLabel.text = str($Camera3D/SpotLight3D.global_rotation)+"/"+str($Camera3D.global_rotation)
 		
 		if abs($Camera3D/SpotLight3D.light_energy- target_light_energy)<.01:
-			target_light_energy = GameManager.RNG.randf_range(.1,3.0)
+			target_light_energy = GameManager.RNG.randf_range(.1,1.0)
 		elif $Camera3D/SpotLight3D.light_energy<target_light_energy:
 			$Camera3D/SpotLight3D.light_energy +=.001
 		elif $Camera3D/SpotLight3D.light_energy>target_light_energy:
