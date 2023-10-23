@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://7ehn4qr657d3"]
+
+[ext_resource type="PackedScene" uid="uid://du2c2x0l2qsvg" path="res://Objects/Player.tscn" id="1_txyfr"]
+[ext_resource type="PackedScene" uid="uid://0ek7bgrbgrte" path="res://Objects/Environment/outdoors.tscn" id="2_ndcnt"]
+[ext_resource type="PackedScene" uid="uid://calh0mj2ky4rn" path="res://Levels/local/Level1Structure.tscn" id="3_e5oph"]
+[ext_resource type="PackedScene" uid="uid://r84t5ls0n2dx" path="res://Objects/Placeables/Lamp.tscn" id="4_cub1o"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_w2chn"]
+
+[sub_resource type="Sky" id="Sky_qgfcu"]
+sky_material = SubResource("ProceduralSkyMaterial_w2chn")
+
+[sub_resource type="Environment" id="Environment_i75hr"]
+background_mode = 2
+sky = SubResource("Sky_qgfcu")
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_sky_contribution = 0.0
+ambient_light_energy = 0.0
+
+[node name="Level1Combined" type="Node3D"]
+
+[node name="CharacterBody3D" parent="." instance=ExtResource("1_txyfr")]
+transform = Transform3D(1.74191, 0, 0.168095, 0, 1.75, 0, -0.168095, 0, 1.74191, 20.5, 2, 22.3099)
+
+[node name="Outdoors" parent="." instance=ExtResource("2_ndcnt")]
+transform = Transform3D(1.31134e-07, 0, -1, 0, 1, 0, 1, 0, 1.31134e-07, 40.7, 14.85, -165.45)
+
+[node name="Level1Structure" parent="." instance=ExtResource("3_e5oph")]
+transform = Transform3D(-1, 0, -1.50996e-07, 0, 1, 0, 1.50996e-07, 0, -1, 0, 0, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_i75hr")
+
+[node name="Lights" type="Node3D" parent="."]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="Lights"]
+transform = Transform3D(0.812082, 0.146075, -0.564964, 0.388694, 0.586716, 0.710409, 0.435246, -0.796509, 0.419684, -38.8294, 25.0102, 168.679)
+layers = 2
+light_cull_mask = 4294967262
+shadow_enabled = true
+
+[node name="OmniLight3D" parent="Lights" instance=ExtResource("4_cub1o")]
+transform = Transform3D(1, -7.17753e-23, -4.37114e-08, 4.37114e-08, 1.64203e-15, 1, 0, -1, 1.64203e-15, -20.9372, 4.58044, -19.655)
